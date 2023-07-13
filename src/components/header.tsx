@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -11,7 +12,7 @@ const Header = ({ siteTitle }) => (
       justifyContent: `space-between`,
     }}
   >
-    <Link
+    {/* <Link
       to="/"
       style={{
         fontSize: `var(--font-sm)`,
@@ -19,7 +20,16 @@ const Header = ({ siteTitle }) => (
       }}
     >
       {siteTitle}
-    </Link>
+    </Link> */}
+    <StaticImage
+      src="../images/gatsby-icon-black.png"
+      loading="eager"
+      width={64}
+      quality={95}
+      formats={["auto", "webp", "avif"]}
+      alt=""
+      style={{ marginBottom: `var(--space-3)` }}
+    />
   </header>
 )
 
