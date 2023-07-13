@@ -2,7 +2,11 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Header = ({ siteTitle }) => (
+interface HeaderProps {
+  siteTitle: string
+}
+
+const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
   <header
     style={{
       margin: `0 auto`,
@@ -23,7 +27,6 @@ const Header = ({ siteTitle }) => (
     </Link> */}
     <StaticImage
       src="../images/gatsby-icon-black.png"
-      loading="eager"
       width={64}
       quality={95}
       formats={["auto", "webp", "avif"]}
